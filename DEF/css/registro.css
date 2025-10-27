@@ -1,126 +1,156 @@
-/* Fondo general */
+/* --- Estilos Generales --- */
 body {
-  background-color: black;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Fondo negro */
+    color: #f0f0f0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Título principal */
-h1 {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  font-size: 30px;
-  margin-top: 20px;
+/* --- Contenedor del Formulario --- */
+.registro-container {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #00bfff; /* Borde azul gamer */
 }
 
-/* Contenedor del login y registro */
-.login-container {
-  margin: 100px auto;
-  width: 320px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background: #f4f4f4;
-  color: black;
-  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+.registro-container h2 {
+    text-align: center;
+    color: #e50074; /* Rosa gamer */
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Encabezado dentro de login/registro */
-.login-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
+/* --- Estructura de Campos (reemplaza a <br>) --- */
+.campo-grupo {
+    margin-bottom: 20px;
 }
 
-/* Labels e inputs */
-.login-container label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
+.campo-grupo label {
+    display: block; /* Cada label en su propia línea */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #f0f0f0;
+    font-size: 1.1em;
 }
 
-.login-container input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-input[type="text"],
-input[type="password"] {
-  width: 25%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+.campo-grupo input[type="text"],
+.campo-grupo input[type="email"],
+.campo-grupo input[type="password"] {
+    width: 100%;
+    padding: 12px 10px;
+    box-sizing: border-box; /* Asegura que el padding no desborde */
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f0f0f0;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Botones */
-.login-container button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 10px;
-  background: green;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+.campo-grupo input:focus {
+    border-color: #00bfff; /* Borde azul al enfocar */
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+    outline: none;
 }
 
-.login-container button:hover {
-  background: #575757;
+/* --- Mensajes de Error --- */
+.error-texto {
+    color: #ff4d4d; /* Rojo claro para errores */
+    font-size: 0.9em;
+    display: block;
+    margin-top: 5px;
+    min-height: 1em; /* Evita que el layout "salte" */
 }
 
-/* Menú lateral */
-#menu-toggle {
-  display: none;
+/* --- Botón --- */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #e50074;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
 }
 
-.buttonM {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  font-size: 20px;
-  background: #111;
-  color: white;
-  padding: 10px 15px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
+button[type="submit"]:hover {
+    background-color: #ff3399;
+    transform: translateY(-2px);
 }
 
-.menu {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background: #111;
-  transition: 0.3s;
-  padding-top: 60px;
+/* --- Enlace inferior --- */
+.enlace-login {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
 }
 
-.menu a {
-  display: block;
-  padding: 12px 20px;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+.enlace-login a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.menu a:hover {
-  background: #575757;
+.enlace-login a:hover {
+    text-decoration: underline;
 }
 
-#menu-toggle:checked ~ .menu {
-  left: 0;
+
+.contenedor-menu {
+    background-color: #2a2a2a; /* Fondo gris oscuro para el contenedor */
+    border-bottom: 2px solid #00bfff; /* Borde azul */
 }
 
-#menu-toggle:checked + .buttonM {
-  background: #575757;
+/* --- La lista (UL) --- */
+.contenedor-menu ul {
+    /* ¡La clave para ordenar de izquierda a derecha! */
+    display: flex;
+    
+    /* Centra los links en el contenedor */
+    justify-content: center; 
+    
+    /* Quita los puntos de la lista */
+    list-style: none;
+    
+    /* Limpia los estilos por defecto del navegador */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Los links (A) y sus items (LI) --- */
+.contenedor-menu li a {
+    display: block; /* Hace que el link ocupe todo el espacio del botón */
+    padding: 15px 25px; /* 15px arriba/abajo, 25px a los lados */
+    color: #f0f0f0;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto al pasar el ratón (hover) */
+.contenedor-menu li a:hover {
+    background-color: #e50074; /* Se pone rosa */
+    color: #fff;
+}
+
+/* Estilo para el link activo */
+.contenedor-menu li a.activo {
+    background-color: #00bfff; /* Se pone azul */
+    color: #000;
 }

@@ -1,361 +1,304 @@
-/* ============================================= */
-/* == ESTILOS GENERALES (BODY, H1, H2, P) == */
-/* ============================================= */
+/* ================================================
+ ARCHIVO CSS CONSOLIDADO (style.css)
+================================================
+*/
 
-/* Definiciones combinadas de los 4 archivos.
-  - background-color: 'black' (de tiendaGamer.css)
-  - font-family: 'Arial, sans-serif' (de pagPrinc.css y ofertas.css)
-  - color: '#fff' (de ofertas.css)
-  - padding: '20px' (de ofertas.css)
-  - margin: '0' (de registro.css)
+/* ---------------------------------
+ 1. ESTILOS GLOBALES Y BASE
+ (Combinado de todos los archivos)
+---------------------------------
 */
 body {
-  background-color: black;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #fff;
-  padding: 20px; /* Añadido desde ofertas.css */
+    background-color: black;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
-/* Definiciones combinadas.
-  - La mayoría de estilos vienen de tiendaGamer.css (que coincidía con registro.css)
-  - font-size: 30px (gana sobre los 20px de pagPrinc.css)
-  - color: white (gana sobre el #00ffcc de ofertas.css)
-*/
 h1 {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  font-size: 30px;
-  margin-top: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
 }
 
-/* Definición general de H2 (solo en tiendaGamer.css) */
 h2 {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Párrafos (de pagPrinc.css y tiendaGamer.css)
-  - p.p1 incluye 'font-style: italic' de tiendaGamer.css
-*/
-p.p1 { /* mision*/
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-style: italic; /* de tiendaGamer.css */
-  color: rgb(255, 255, 255);
+/* Estilos de párrafos de pagPrinc.css y tiendaGamer.css */
+p.p1,
+p.p2,
+p.p3,
+p.p4 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
 }
 
-p.p2 { /*texto mision*/
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: rgb(255, 255, 255);
+p.p1 {
+    font-style: italic;
+    
 }
 
-p.p3 { /*vision*/
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: rgb(255, 255, 255);
-}
-
-p.p4 { /*texto vision*/
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: rgb(255, 255, 255);
-}
-
-/* ============================================= */
-/* == NAVEGACIÓN Y BOTONES SUPERIORES == */
-/* ============================================= */
-
-/* (de pagPrinc.css y tiendaGamer.css) */
-ul.section-nav {
-  display: flex;
-  justify-content: flex-end;
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
-  width: 100%;
-}
-
-button.bntIni {
-  color: black;
-  background-color: white;
-  padding: 10px;
-}
-
-button.btnRegInis {
-  color: black;
-  background-color: white;
-  padding: 10px;
-}
-
-button.btnContacto {
-  color: black;
-  background-color: white;
-  padding: 10px;
-}
-
-/* ============================================= */
-/* == CONTENEDOR LOGIN/REGISTRO == */
-/* ============================================= */
-
-/* Estilos combinados de .login-container
-  - Ganan las propiedades de tiendaGamer.css (width: 300px, padding: 40px, background: #fff)
-*/
-.login-container {
-  margin: 100px auto;
-  width: 300px; /* Gana sobre 320px */
-  padding: 40px; /* Gana sobre 20px */
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background: #fff; /* Gana sobre #f4f4f4 */
-  color: black; /* De registro.css (única definición) */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Gana sobre el shadow de registro.css */
-  text-align: center; /* Añadido por tiendaGamer.css */
-}
-
-/* (Definición idéntica en registro.css y pagPrinc.css) */
-.login-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* (pagPrinc.css sobreescribe a registro.css, eliminando 'font-weight: bold')
-*/
-.login-container label {
+.carousel-inner img {
+  max-width: 30%;
+  margin: auto;
   display: block;
-  margin-top: 10px;
+  border-radius: 10px;
+
 }
 
-/* (pagPrinc.css sobreescribe a registro.css, cambiando padding a 8px)
+/* ---------------------------------
+ 2. NAVEGACIÓN SUPERIOR
+ (de tiendaGamer.css y pagPrinc.css)
+---------------------------------
 */
-.login-container input {
-  width: 100%;
-  padding: 8px; /* Gana sobre 10px */
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+ul.section-nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 100%;
 }
 
-/* (pagPrinc.css sobreescribe a registro.css, cambiando fondo y quitando font-weight)
+button.bntIni,
+button.btnRegInis,
+button.btnContacto {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border: none; /* Añadido para consistencia */
+    cursor: pointer; /* Añadido para usabilidad */
+}
+
+/* ---------------------------------
+ 3. MENÚ LATERAL (HAMBURGUESA)
+ (de registro.css y pagPrinc.css - Versión más completa)
+---------------------------------
 */
-.login-container button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 10px;
-  background: #099901; /* Gana sobre 'green' */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* (pagPrinc.css añade 'text-align' y 'margin-bottom' al hover)
-*/
-.login-container button:hover {
-  background: #575757;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* ============================================= */
-/* == INPUTS Y BOTONES GENERALES == */
-/* ============================================= */
-
-/* (de pagPrinc.css y tiendaGamer.css) */
-label {
-  display: center; /* Nota: 'center' no es un valor válido para 'display'. Quizás quisiste 'block' con 'text-align: center'. */
-  margin-top: 10px;
-}
-
-/*
-  Combinado de los 3 archivos.
-  - width: 100% (Gana sobre 25% de registro.css)
-  - font-family y box-sizing (Se mantienen de registro.css)
-*/
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
-
-/* Botón genérico (de pagPrinc.css) */
-button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: green;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Hover de botón genérico (de tiendaGamer.css) */
-button:hover {
-  background-color: #0056b3;
-}
-
-/* 'button1' (probablemente un error tipográfico en tiendaGamer.css) */
-button1 {
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: green;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* ============================================= */
-/* == MENÚ LATERAL == */
-/* ============================================= */
-
-/* (Combinado de registro.css y pagPrinc.css) */
+/* Ocultar el checkbox */
 #menu-toggle {
-  display: none;
+    display: none;
 }
 
+/* Botón del menú */
 .buttonM {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  font-size: 20px;
-  background: #111;
-  color: white;
-  padding: 10px 15px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+    background: #111;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    z-index: 1001; /* Asegura que esté al frente */
 }
 
+/* Menú lateral */
 .menu {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background: #111;
-  transition: 0.3s;
-  padding-top: 60px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* oculto inicialmente */
+    width: 250px;
+    height: 100%;
+    background: #111;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000; /* Debajo del botón */
 }
 
 .menu a {
-  display: block;
-  padding: 12px 20px;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .menu a:hover {
-  background: #575757;
+    background: #575757;
 }
 
-#menu-toggle:checked ~ .menu {
-  left: 0;
-}
-
-#menu-toggle:checked + .buttonM {
-  background: #575757;
-}
-
-/* Clases extra de pagPrinc.css */
-.menu-btn {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  font-size: 24px;
-  background: #111;
-  color: white;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
+/* Botón de cerrar (de pagPrinc.css) */
 .close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 24px;
-  background: #111;
-  color: white;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    background: #111;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-/* ============================================= */
-/* == ESTILOS DE 'OFERTAS.CSS' == */
-/* ============================================= */
-
-.oferta {
-  background-color: #2c2c2c;
-  border: 1px solid #444;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
+/* Mostrar menú cuando se activa el checkbox */
+#menu-toggle:checked~.menu {
+    left: 0;
 }
 
-.precio {
-  color: #ff5050;
-  font-weight: bold;
+/* Cambiar color del botón al abrir */
+#menu-toggle:checked+.buttonM {
+    background: #575757;
 }
 
-.boton {
-  background-color: #00ffcc;
-  color: #000;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+
+/* ---------------------------------
+ 4. FORMULARIOS (LOGIN / REGISTRO)
+ (Combinado de registro.css, pagPrinc.css y tiendaGamer.css)
+---------------------------------
+*/
+.login-container {
+    margin: 100px auto;
+    width: 320px; /* Usando 320px de registro.css */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f4f4f4;
+    color: black; /* De registro.css */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* De registro.css */
+    text-align: center; /* De tiendaGamer.css */
 }
 
-.boton:hover {
-  background-color: #00ccaa;
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* ============================================= */
-/* == ESTILOS DE TABLAS == */
-/* ============================================= */
+.login-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold; /* De registro.css */
+}
 
-/* (de tiendaGamer.css) */
+/* Estilo general para inputs en formularios */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Importante para que el padding no afecte el ancho */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo específico para inputs dentro del contenedor (refuerza) */
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Botón dentro del formulario */
+.login-container button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: #099901; /* Verde de pagPrinc.css */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold; /* De registro.css */
+}
+
+.login-container button:hover {
+    background: #575757;
+}
+
+/* ---------------------------------
+ 5. TABLAS
+ (de tiendaGamer.css y pagPrinc.css)
+---------------------------------
+*/
 table {
-  width: 80%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background-color: #1a1a1a;
-  color: white;
-  font-family: 'Roboto', sans-serif;
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 th,
 td {
-  border: 1px solid #444;
-  padding: 10px;
-  text-align: center;
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
 }
 
 th {
-  background-color: #333;
-  color: #00ffcc;
+    background-color: #333;
+    color: #00ffcc;
 }
 
 tr:hover {
-  background-color: #2a2a2a;
+    background-color: #2a2a2a;
 }
 
-/* (de pagPrinc.css) */
-tr.presp1, tr.presp2, tr.presp3, tr.presp4, tr.presp5, tr.presp6, tr.presp7, tr.presp8, tr.presp9, tr.presp10, tr.presp11, tr.presp12, tr.presp13, tr.presp14 {
-  color: #ffffff;
-  text-align: center;
-  align-items: center;
-  display: table-row;
+/* Filas específicas de pagPrinc.css */
+tr.presp1,
+tr.presp2,
+tr.presp3,
+tr.presp4,
+tr.presp5,
+tr.presp6,
+tr.presp7,
+tr.presp8,
+tr.presp9,
+tr.presp10,
+tr.presp11,
+tr.presp12,
+tr.presp13,
+tr.presp14 {
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    display: table-row;
+}
+
+
+/* ---------------------------------
+ 6. ESTILOS DE OFERTAS
+ (de ofertas.css)
+---------------------------------
+*/
+.oferta {
+    background-color: #2c2c2c;
+    border: 5px solid #444;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px; 
+    margin: 0 auto 15px auto;
+}
+
+.precio {
+    color: #ff5050;
+    font-weight: bold;
+}
+
+/* Este botón es específico para las ofertas */
+.boton {
+    background-color: #00ffcc;
+    color: #000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    width: auto;
+}
+
+.boton:hover {
+    background-color: #00ccaa;
 }
