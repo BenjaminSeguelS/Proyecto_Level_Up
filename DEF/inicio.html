@@ -3,103 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/pagPrinc.css">
-    <script src="script.js"></script>
-    <title>Level Up Gamer</title>
+    <title>GamerHub - Tu Comunidad de Videojuegos</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Tienda Gamer Level-Up</h1>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="buttonM">⁝ </label>
 
+   <header>
+        <div class="logo">
+            <h1><a href="index.html">GamerHub</a></h1>
+        </div>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="registro.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    // menu-desplegable
-    <nav class="menu">
-        <a href="inicio.html">Inicio</a>
-        <a href="login.html">Iniciar Sesión</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="productos.html">Productos</a>
-        <a href="ofertas.html">Ofertas</a>
-    </nav>
-    
-    <div class="content">
-        <h2>Bienvenido a Level Up Gamer</h2>
-        <p>Tu tienda en línea para todo lo relacionado con videojuegos y accesorios.</p>
-    </div>
     <div class="container-principal">
         
         <main>
             
-            <section class="hero-section">
-                <h2>¡El Lanzamiento del Año ya está aquí!</h2>
-                <p>Lee nuestra reseña completa del nuevo 'CyberOdyssey 2' y descubre si vale la pena.</p>
+            <section class="carrusel-hero">
+                <div class="carrusel-contenedor">
+
+                    <a href="productos.html" class="carrusel-slide active">
+                        <img src="https://static.nb.com.ar/i/nb_GABINETE-GAMER-THERMALTAKE-VERSA-T35-TG-RGB-BLACK_ver_d6e7cfd74a866171aa0232b8606d9f5b.jpg" alt="Gabinetes ">
+                        <div class="carrusel-info">
+                            <h2>Gabinetes Gamers</h2>
+                            <p>¡Consigue este INCREIBLE GABINETE GAMER para tus juegos o proyectos!!!</p>
+                        </div>
+                    </a>
+                    <a href="foro.html" class="carrusel-slide">
+                        <img src="https://via.placeholder.com/1200x300/E50074/FFFFFF?text=Eventos+de+la+Comunidad" alt="Comunidad Gamer">
+                        <div class="carrusel-info">
+                            <h2>Eventos de la Comunidad</h2>
+                            <p>¡Inscríbete en nuestro torneo de 'Rift Champions'! Grandes premios y stream en vivo.</p>
+                            <span class="cta-button">Ir al Foro</span>
+                        </div>
+                    </a>
+
+                </div>
                 
-                <a href="reviews/cyberodyssey.html" class="cta-button">Leer Reseña Ahora</a>
+                <button class="carrusel-btn prev">&#10094;</button>
+                <button class="carrusel-btn next">&#10095;</button>
+                
+                <div class="carrusel-puntos">
+                    <span class="punto active"></span>
+                    <span class="punto"></span>
+                    <span class="punto"></span>
+                </div>
             </section>
-
             <section class="noticias-recientes">
-                <h3>Últimas Noticias</h3>
-                
+                <h3>Noticias Secundarias</h3>
                 <article class="noticia-card">
-                    <h4>Actualización 1.5 de 'Valiant Saga'</h4>
-                    <p>Los desarrolladores anuncian nuevo contenido, balance de personajes y un evento de temporada...</p>
-                    <a href="noticias/valiant-saga-1-5.html">Leer más</a>
+                    <h4>Reseña: 'Ancient Souls II'</h4>
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/SJnKGodp8sY" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <p>Un digno sucesor, pero con algunos tropiezos. Lee nuestro análisis completo...</p>
+                    <a href="https://darksouls2.wiki.fextralife.com/Ancient+Dragon+Soul">Leer más</a>
                 </article>
-
                 <article class="noticia-card">
-                    <h4>Finales del Torneo de eSports 'Rift Champions'</h4>
-                    <p>El equipo 'Quantum Strikers' se lleva el trofeo en una final infartante contra 'Phoenix Rise'...</p>
-                    <a href="noticias/final-esports.html">Leer más</a>
-                </article>
-
-                <article class="noticia-card">
-                    <h4>Rumor: ¿Se viene la secuela de 'Ancient Souls'?</h4>
-                    <p>Una filtración de arte conceptual sugiere que el aclamado RPG podría estar en desarrollo...</p>
-                    <a href="noticias/rumor-ancient-souls.html">Leer más</a>
+                    <h4>Guía: Mejores periféricos 2025</h4>
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://youtube.com/embed/shorts/O1Rr0NaY93k?si=lNsRL_i3oiEKHPbf" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <p>¿Buscas nuevo ratón o teclado? Te mostramos las mejores opciones calidad-precio...</p>
+                    <a href="productos.html">Leer más</a>
                 </article>
             </section>
 
         </main>
-
         <aside>
-            
             <section class="streams-en-vivo">
                 <h3>Streams Populares</h3>
                 <ul>
-                    <li>StreamerAlfa - Jugando 'CyberOdyssey 2'</li>
-                    <li>GamerBeta - Speedrun 'Ancient Souls'</li>
-                    <li>ZetaPlayer - Torneo 'Rift Champions'</li>
+                    <li>StreamerAlfa - Jugando 'CyberOdyssey 3'</li>
+                    <li>GamerBeta - Speedrun 'Ancient Souls II'</li>
                 </ul>
             </section>
-
             <section class="proximos-lanzamientos">
                 <h3>Próximos Lanzamientos</h3>
                 <ul>
                     <li>'Starfield 2' - 15 Nov</li>
                     <li>'Project Zero' - 1 Dic</li>
-                    <li>'Indie Gem' - 5 Dic</li>
                 </ul>
             </section>
-
         </aside>
 
-    </div> <footer>
-        <div class="redes-sociales">
-            <a href="#">Twitch</a>
-            <a href="#">Twitter (X)</a>
-            <a href="#">Discord</a>
-            <a href="#">YouTube</a>
-        </div>
+    </div> 
+    <footer class="piepag">
         <div class="enlaces-footer">
-            <a href="acerca.html">Sobre Nosotros</a>
+            <a href="informacionNosotros.html">Sobre Nosotros</a>
             <a href="contacto.html">Contacto</a>
             <a href="privacidad.html">Política de Privacidad</a>
         </div>
-        <p>&copy; 2025 GamerHub. Todos los derechos reservados.</p>
+        <p>2025 GamerHub. Todos los derechos reservados.</p>
     </footer>
 
-
-
-
+    <script src="script.js"></script>
 </body>
 </html>
